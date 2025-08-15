@@ -1,3 +1,5 @@
+"""Thanks to Tim Roith and Samira Kabri at DESY who helped creating an earlier version of this notebook."""
+
 import numpy as np
 import pywt
 
@@ -250,8 +252,8 @@ class lscg(optimizer):
 
 
 class lv:
-    def __init__(self, l):
-        self.l = l
+    def __init__(self, k):
+        self.l = k
 
     def __len__(self):
         return len(self.l)
