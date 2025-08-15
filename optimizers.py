@@ -50,7 +50,11 @@ class TV:
         self.grad = Grad()
 
     def __call__(self, u):
-        return np.linalg.norm(self.grad(u).ravel(), ord=1)
+        print(f"{u.shape=}")
+        g = self.grad(u)
+        print(f"{g.shape=}")
+        inner = np.linalg.norm(g, axis=0, ord=2)
+        return np.linalg.norm(inner, ord=1)
 
 
 class optimizer:
